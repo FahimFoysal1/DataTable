@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+    <!-- <link rel="stylesheet" href="jquery.dataTables.min.css"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/datatable/dataTables.bootstrap5.min.css">
+</head>
+
+<body>
+    <table id="ourTable" class="table table-hover table-striped" style="width:100%;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Order</th>
+                <th>Kajer Jayga</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+    <script src="assets/js/jquery-3.5.1.js"></script>
+
+    <script src="assets/datatable/jquery.dataTables.min.js"></script>
+    <script src="assets/datatable/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+
+
+        $(document).ready(function () {
+            $('#ourTable').DataTable({
+                "ajax": 'dataSource.json',
+
+                "lengthMenu": [
+                    [5, 10, 15, -1],
+                    ["min", "mid", "max", "All"]
+                ]
+            });
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
